@@ -62,6 +62,9 @@ div h2 {
         background-color: lightyellow;
     } 
     .BarraLateralBoton{
+        float: none;
+        display: block;
+        padding: 6;
         background-color: lightyellow;
       }
     }
