@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href ="estiloshome.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <section class="registro">
+        <div class="container">
+            <form>
+                <h1>Registro</h1>
+                <fieldset>
+                    <legend>Datos del cliente</legend>
+                    <div class = "datos row">
+                        <div class = "txtbox form-floating col-sm-12 col-md-12 col-lg-8">
+                            <input type ="nombre" class="form-control" id="floatingInput" placeholder="Nombre + Ap. Paterno + Ap. Materno">
+                            <label for="floatingInput">Nombre</label>
+                        </div>
+                        <div class = "txtbox form-floating col-sm-12 col-md-12 col-lg-4">
+                            <input type ="telefono" class="form-control" id="floatingInput" placeholder="###-###-##-##">
+                            <label for="floatingInput">Teléfono</label>
+                        </div> 
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class = "datos">
+                        <legend>Datos del vehiculo</legend>
+                        <div class = "row">
+                            <div class = "txtbox form-floating col-sm-12 col-md-6 col-lg-8">
+                                <input type ="placas" class="form-control" id="floatingInput" placeholder="Placas">
+                                <label for="floatingInput">Placas</label>
+                            </div>
+                            <div class = "txtbox form-floating col-sm-12 col-md-6 col-lg-4">
+                                <input type ="marca" class="form-control" id="floatingInput" placeholder="Marca">
+                                <label for="floatingInput">Marca</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class = "txtbox form-floating col-sm-12 col-md-8 col-lg-10">
+                                <input type ="modelo" class="form-control" id="floatingInput" placeholder="Modelo">
+                                <label for="floatingInput">Modelo</label>
+                            </div>
+                            <div class = "txtbox form-floating col-sm-12 col-md-4 col-lg-2">
+                                <input type ="lcolor" class="form-control" id="floatingInput" placeholder="Color">
+                                <label for="floatingInput">Color</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class = "txtbox form-floating col-sm-12 col-md-12 col-lg-10">
+                                <textarea class="form-control" placeholder="Servicio" id="floatingTextarea2" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2">Descripción del servicio</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset> 
+
+                <button type="Registrar" class="btn btn-primary">Registrar</button>
+
+            </form>
+        </div>
+    </section>
+</body>
+</html>
