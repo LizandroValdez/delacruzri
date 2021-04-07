@@ -10541,3 +10541,59 @@ img {
   color: #f1f1f1;
   text-align: justify;
 }
+.life-history {
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.life-history::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, .3);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.life-history h2 {
+  color: #FFF;
+  font-weight: 600;
+  font-weight: 2.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.life-history .life-single {
+  border-bottom: 2px solid rgba(255, 255, 255, .5);
+  margin: 35px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.life-history .life-single p {
+  margin-bottom: 20px;
+}
+
+.life-history .life-single p span {
+  border: 3px solid var(--primary-color);
+  padding: 5px 15px;
+  color: #FFF;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.life-history .life-single h4 {
+  color: #FFF;
+  font-weight: 500;
+}
+
+.life-history .life-single p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, .8);
+}
