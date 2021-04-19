@@ -2,17 +2,14 @@ $(document).ready(function(){
     $('#submit').click(function(){
         let usuario = $('#usuario').val();
         var contraseña = $('#contraseña').val();
-        if(usuario == 'admin')
+        if(usuario == 'admin' && contraseña == 'admin')
         {
-            if(contraseña == 'admin')
-            {
-                $(function(){
-                    $("Has ingreado!").dialog();
-                })
-                swal({
-                    title: "Log In", text: "Has ingreado!", icon: "success", button: "OK"
-                });
-            }
+            alert("Has ingreado!");
+            return;
+        }
+        else{
+            alert("Error! datos incorrectos");
+            return;
         }
     });
 });
