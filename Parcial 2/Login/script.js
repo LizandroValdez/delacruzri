@@ -1,15 +1,15 @@
 $(document).ready(function(){
-    $('#submit').click(function(){
-        let usuario = $('#usuario').val();
+
+    $('#submit').click(function(e){
+        var usuario = $('#usuario').val();
         var contraseña = $('#contraseña').val();
         if(usuario == 'admin' && contraseña == 'admin')
         {
-            alert("Has ingreado!");
-            return;
+            $("#myModal").show();
         }
         else{
-            alert("Error! datos incorrectos");
-            return;
+            $("#myModal").show();
         }
+        
     });
 });
