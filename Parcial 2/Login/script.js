@@ -1,14 +1,17 @@
 $(document).ready(function(){
 
-    $('#submit').click(function(e){
+    $('#submit').click(function(){
+ 
         var usuario = $('#usuario').val();
         var contraseña = $('#contraseña').val();
         if(usuario == 'admin' && contraseña == 'admin')
         {
-            $("#myModal").show();
+            $('#myModal').modal('show');
         }
         else{
-            $("#myModal").show();
+            $('.modal-body').html("Error!");
+            $('#myModal').modal('show');
+
         }
         
     });
