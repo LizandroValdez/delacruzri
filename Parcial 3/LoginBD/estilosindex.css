@@ -1,0 +1,71 @@
+.MenuLateral{
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    background-color: lightblue;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.BarraLateralTitulo{
+    color: back;
+    text-align: center;
+}
+
+.BarraLateralBoton{
+    background-color: lightblue;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration:none;
+}
+
+.BarraLateralBoton:hover{
+    background-color:lightgray;
+}
+
+.BarraLateralBoton:active{
+    background-color: gray;
+}
+.Contenido{
+    margin-left:200px;
+    padding: 10px;
+}
+div h2 {
+    text-align: center;
+}
+
+@media screen and (max-width: 800px){
+    .MenuLateral{
+        width: 100%;
+        height: auto;
+        position: relative;
+        background-color: lightgreen;
+    }
+    .BarraLateralBoton{
+        float: left;
+        text-align: center;
+        width: 20%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        background-color: lightgreen;
+    }
+    .Contenido{
+        margin-left: 0;
+        margin-top: 50px;
+    }
+@media screen and (max-width: 400px) {
+    .MenuLateral{
+        background-color: lightyellow;
+    } 
+    .BarraLateralBoton{
+        float: none;
+        display: block;
+        padding: 6;
+        background-color: lightyellow;
+      }
+    }
+}
