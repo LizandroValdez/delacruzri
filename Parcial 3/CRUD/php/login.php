@@ -13,7 +13,6 @@
         $consulta -> execute();
 
         $res = $consulta -> fetch(PDO::FETCH_ASSOC);
-        $n = $consulta -> rowCount();
 
         #echo var_dump($res);
         if(password_verify($vContraseña,$res['password']))
