@@ -1,6 +1,6 @@
 <?php
     try{
-        $con = new PDO("mysql:host=localhost;dbname=login",'root','');
+        $con = new PDO("mysql:host=localhost;dbname=crud",'root','');
 
         $vUsuario = $_POST['usuario'];
         $vContraseña = $_POST['contraseña'];
@@ -29,9 +29,8 @@
     }
     catch(PDOException $e)
     {
-    echo "No se ha podido establecer la conexión a la base de datos";
+    $reg['msg'] = "No se ha podido establecer la conexión a la base de datos";
     echo $e->getMessage();
-    exit();
     }
     $reg_encoded = array_map('utf8_encode',$reg);
     echo json_encode($reg_encoded);
