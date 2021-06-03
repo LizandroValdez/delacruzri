@@ -2,7 +2,7 @@
     height: 100%;
     width: 200px;
     position: fixed;
-    background-color: lightblue;
+    background-color: lightgray;
     z-index: 1;
     top: 0;
     left: 0;
@@ -14,7 +14,7 @@
 }
 
 .BarraLateralBoton{
-    background-color: lightblue;
+    background-color: lightgray;
     color: black;
     display: block;
     padding: 12px;
@@ -22,7 +22,7 @@
 }
 
 .BarraLateralBoton:hover{
-    background-color:lightgray;
+    background-color:gray;
 }
 
 .BarraLateralBoton:active{
