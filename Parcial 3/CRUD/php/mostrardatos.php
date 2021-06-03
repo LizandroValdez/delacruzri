@@ -14,10 +14,10 @@
             $createTable .= '<tr>';
             $createTable .= '<th scope="col">ID</th>';
             $createTable .= '<th scope="col">Nombre</th>';
-            $createTable .= '<th scope="col">Precio compra</th>';
-            $createTable .= '<th scope="col">Precio venta</th>';
             $createTable .= '<th scope="col">Categoría</th>';
             $createTable .= '<th scope="col">Proveedor</th>';
+            $createTable .= '<th scope="col">Precio compra</th>';
+            $createTable .= '<th scope="col">Precio venta</th>';
             $createTable .= '</tr>';
             $createTable .= '</thead>';
             $createTable .= '<tbody>';
