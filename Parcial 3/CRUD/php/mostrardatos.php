@@ -9,7 +9,7 @@
         {
             $registros = $consulta -> fetchall();
 
-            $createTable = '<table class ="table table-stripped">';
+            $createTable = '<table class ="table table-striped table-hover">';
             $createTable .= '<thead>';
             $createTable .= '<tr>';
             $createTable .= '<th scope="col">ID</th>';
