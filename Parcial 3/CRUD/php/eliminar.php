@@ -9,19 +9,23 @@
 
         if($consulta -> execute())
         {
-            $resultado = $consulta -> fetch(PDO::FETCH_ASSOC);
-
-            $reg['msg'] = "El producto id = ".$vID." ha sido eliminado";
+            $resultado = $consulta -> rowCount();
+            if($resultado > 0)
+            {
+                $msg = "El producto id = ".$vID." ha sido eliminado";
+            }
+            else{
+                $msg = "Error, ID no valido."; 
+            }
         }
         else{
-            $reg['msg'] = "Error, ID no valido.";
+            $msg = "Eror al ejecutar la consulta";
         }
-    }catch(PDOException $e)
+    }catch(PDOException $ex)
     {
-        $reg['msg'] = "No se ha podido establecer la conexión a la base de datos";
-        echo $e->getMessage();
+        $msg = "No se ha podido establecer la conexión a la base de datos";
+        echo $ex->getMessage();
     }
-    $reg_encoded = array_map('utf8_encode',$reg);
-    echo json_encode($reg_encoded);
+    echo json_encode($msg);
     $con -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 ?>

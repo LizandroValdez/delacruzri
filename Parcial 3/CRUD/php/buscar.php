@@ -14,10 +14,10 @@
         else{
             $reg['msg'] = "Error al buscar";
         }
-    }catch(PDOException $e)
+    }catch(PDOException $ex)
     {
         $reg['msg'] = "No se ha podido establecer la conexión a la base de datos";
-        echo $e->getMessage();
+        echo $ex->getMessage();
     }
     $reg_encoded = array_map('utf8_encode',$reg);
     echo json_encode($reg_encoded);

@@ -17,8 +17,8 @@ $('document').ready(function(){
         }
         else{
             $.post('../php/guardar.php',{id_producto:vID,nombre:vNombre,preciocomp:vPrecioComp,preciovent:vPrecioVent,categoria:vCategoria,proveedor:vProveedor},
-            function(r){
-                alert(r.msg);
+            function(msg){
+                alert(msg);
             },'json');
             $('.form-control').val('');
             ActualizarTabla();
@@ -28,13 +28,13 @@ $('document').ready(function(){
     $("#Eliminar").click(function(){
         var vID = $('#id').val();
         $.post('../php/eliminar.php',{id:vID},
-        function(r){
-            if(!r.msg.includes("Error"))
+        function(msg){
+            if(!msg.includes("Error"))
             {
-                alert(r.msg);;
+                alert(msg);;
             }
             else{
-                alert(r.msg)
+                alert(msg)
             }
         },'json');
         ActualizarTabla();
@@ -58,8 +58,8 @@ $('document').ready(function(){
     });
     function ActualizarTabla()
     {
-        $.post('../php/mostrardatos.php',function(r){
-            $("#data").html(r);
+        $.post('../php/mostrardatos.php',function(dataTable){
+            $("#data").html(dataTable);
         });
     }
 });

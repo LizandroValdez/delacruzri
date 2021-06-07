@@ -23,17 +23,17 @@
     
         if($consulta -> execute())
         {
-            $reg['msg'] = "El producto ".$vNombre." del proveedor ".$vProveedor." ha sido guardado";
+            $msg = "El producto ".$vNombre." del proveedor ".$vProveedor." ha sido guardado";
         }
         else{
-            $reg['msg'] = "Error al guardar";
+            $msg = "Error al guardar";
         }
-    }catch(PDOException $e)
+    }catch(PDOException $ex)
     {
-        $reg['msg'] = "No se ha podido establecer la conexión a la base de datos";
-        echo $e->getMessage();
+        $msg = "No se ha podido establecer la conexión a la base de datos";
+        echo $ex->getMessage();
     }
-    $reg_encoded = array_map('utf8_encode',$reg);
-    echo json_encode($reg_encoded);
+    #$reg_encoded = array_map('utf8_encode',$reg);
+    echo json_encode($msg);
     $con -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 ?>

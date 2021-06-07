@@ -36,12 +36,12 @@
             $createTable .= '</table>';
         }
         else{
-            $reg['msg'] = "Error al consultar";
+            $createTable = "Error al consultar";
         }
-    }catch(PDOException $e)
+    }catch(PDOException $ex)
     {
-        $reg['msg'] = "No se ha podido establecer la conexión a la base de datos";
-        echo $e->getMessage();
+        $createTable = "No se ha podido establecer la conexión a la base de datos";
+        echo $ex->getMessage();
     }
     echo $createTable;
     $con -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
