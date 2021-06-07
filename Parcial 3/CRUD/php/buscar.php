@@ -9,17 +9,17 @@
 
         if($consulta -> execute())
         {
-            $reg = $consulta -> fetch(PDO::FETCH_ASSOC);
+            $registro = $consulta -> fetch(PDO::FETCH_ASSOC);
         }
         else{
-            $reg['msg'] = "Error al buscar";
+            $registro['msg'] = "Error al buscar";
         }
     }catch(PDOException $ex)
     {
-        $reg['msg'] = "No se ha podido establecer la conexión a la base de datos";
+        $registro['msg'] = "No se ha podido establecer la conexión a la base de datos";
         echo $ex->getMessage();
     }
-    $reg_encoded = array_map('utf8_encode',$reg);
+    $reg_encoded = array_map('utf8_encode',$registro);
     echo json_encode($reg_encoded);
     $con -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 ?>
