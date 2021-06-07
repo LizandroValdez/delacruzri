@@ -4,10 +4,10 @@ $(document).ready(function(){
         var vusuario = $('#usuario').val();
         var vcontraseña = $('#contraseña').val();
         console.log("javascript");
-        $.post('./php/login.php',{usuario:vusuario, contraseña:vcontraseña},function(r){
-        if(!r['msg'].includes("Error"))
+        $.post('./php/login.php',{usuario:vusuario, contraseña:vcontraseña},function(msg){
+        if(!msg.includes("Error"))
         {
-            $('#myModal .modal-body').html(r.msg);
+            $('#myModal .modal-body').html(msg);
             $('#myModal').modal('show');
 
             $('#myModal').on('hidden.bs.modal', function(){
@@ -15,7 +15,7 @@ $(document).ready(function(){
             })
         }
         else{
-            $('#myModal .modal-body').html(r.msg);
+            $('#myModal .modal-body').html(msg);
             $('#myModal').modal('show');
         }
     },'json');
